@@ -9,11 +9,17 @@ jobs:
             - name: checkout repo
               uses: actions/checkout@v4
 
-            - name: display msg
-              run: echo "this is my first wf"
+            - name: print , list, read
+              run:
+                | 
+                 echo "this is my first wf"
+                 ls
+                 cat README.md
+          #  - name: list files
+        #     run: ls
 
-            - name: list files
-              run: ls
-
-            - name: read file
-              run: cat README.md
+         #   - name: read file
+          #    run: cat README.md
+             
+            - name:
+              run: cowsay -f dragon "Run for cover, iam a Dragon....RAWR">>dragon.txt
