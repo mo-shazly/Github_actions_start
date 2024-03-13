@@ -22,4 +22,4 @@ jobs:
           #    run: cat README.md
              
             - name:
-              run: cowsay -f dragon "Run for cover, iam a Dragon....RAWR">>dragon.txt
+              run: cowsay -f dragon "Run for cover, iam a Dragon....RAWR" >> dragon.txt
