@@ -1,0 +1,13 @@
+name: my first workflow
+
+on: push
+
+job:
+    first_job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: display msg
+              run: echo "this is my first wf"
+
+            - name: list files
+              run: ls
