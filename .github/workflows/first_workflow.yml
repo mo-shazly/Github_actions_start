@@ -1,4 +1,4 @@
-name: my first workflow
+name: my first workflow | shell script
 
 on: push
 
@@ -16,8 +16,11 @@ jobs:
                  ls
                  cat README.md
             
-            - name: 
-              run: ./ascii-script.sh
+            - name: run shell script
+              run:
+                |
+                chmod +x ascii-script.sh
+                ./ascii-script.sh
 
             - name: list files
               run:  ls -ltra
