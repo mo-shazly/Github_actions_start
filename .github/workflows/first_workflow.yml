@@ -9,28 +9,11 @@ jobs:
             - name: checkout repo
               uses: actions/checkout@v4
 
-            - name: print , list, read
-              run:
-                | 
-                 echo "this is my first wf"
-                 ls
-                 cat README.md
-            
+            - name: list files
+              run:  ls -ltra
+
             - name: run shell script
               run:
                 |
                 chmod +x ascii-script.sh
                 ./ascii-script.sh
-
-            - name: list files
-              run:  ls -ltra
-
-            
-          #  - name: list files
-        #     run: ls
-
-         #   - name: read file
-          #    run: cat README.md
-             
-          #  - name:
-          #    run: cowsay -f dragon "Run for cover, iam a Dragon....RAWR" >> dragon.txt
