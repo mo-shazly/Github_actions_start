@@ -6,8 +6,14 @@ jobs:
     first_job:
         runs-on: ubuntu-latest
         steps:
+            - name: checkout repo
+              uses: actions/checkout@v4
+
             - name: display msg
               run: echo "this is my first wf"
 
             - name: list files
               run: ls
+
+            - name: read file
+              run: cat README.md
