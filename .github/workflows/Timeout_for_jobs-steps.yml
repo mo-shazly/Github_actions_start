@@ -25,6 +25,7 @@ jobs:
               run: echo docker push $CONTAINER_REGISTRY/$CONTAINER_USERNAME/$IMAGE_NAME:latest
             
     deploy:
+       # timeout-minutes: 1
         needs: docker
         runs-on: ubuntu-latest 
        # concurrency:
@@ -32,9 +33,10 @@ jobs:
         #    cancel-in-progress: true
         steps: 
             - name: dicker run
+              timeout-minutes: 1
               run: |
                echo docker run -d -p 8080:80 $CONTAINER_REGISTRY/${{ vars.DOCKER_USERNAME }}/$IMAGE_NAME:latest
-               sleep 600s
+               sleep 6000s
               
         
         
