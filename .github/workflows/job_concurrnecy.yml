@@ -26,6 +26,9 @@ jobs:
     deploy:
         needs: docker
         runs-on: ubuntu-latest 
+        concurrency:
+            group: shazly-deployment
+            cancel-in-progress: true
         steps: 
             - name: dicker run
               run: |
