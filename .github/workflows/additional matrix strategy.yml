@@ -1,0 +1,30 @@
+name: Using matrix strategy 2
+
+on:
+    push:
+    workflow_dispatch:
+
+jobs:
+    deploy:
+        strategy:
+            fail-fast: false
+            max-parallel: 2
+            matrix:
+                os: [ubuntu-latest,ubuntu-20.4,windows-latest]
+                images: [hello-world, alpine]
+
+                exclude:
+                    - images: alpine
+                      os: windows-latest
+                include:
+                    - images: amd64/alpine
+                      os: ubuntu-20.4
+        runs-on: ${{ matrix.os }}
+        steps:
+            - name: echo docker details
+              run: docker info
+            
+            - name: run image
+              run: docker run ${{ matrix.images }}
+    
+   
