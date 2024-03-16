@@ -8,7 +8,7 @@ jobs:
     deploy:
         strategy:
             matrix:
-                os: [ubuntu-latest, windows-latest, ubuntu-20.4]
+                os: [ubuntu-latest,ubuntu-20.4,windows-latest]
                 images: [hello-world, alpine]
         runs-on: ${{ matrix.os }}
         steps:
