@@ -1,4 +1,4 @@
-name: Exploring and secrets
+name: Job concurrency
 
 on:
     workflow_dispatch:
