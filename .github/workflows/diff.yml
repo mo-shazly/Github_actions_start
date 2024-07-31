@@ -1,0 +1,24 @@
+name: Multiple jobs 
+
+on: push
+
+jobs:
+    build_job1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout repo
+              uses: actions/checkout@v4
+
+            - name: install cowsay program
+              run: sudo apt-get install cowsay -y
+             
+            - name: Execute cowsay CMD
+              run: cowsay -f dragon "Run for cover, iam a Dragon....RAWR" >> dragon.txt
+            
+            - name: upload artifact 
+              uses: actions/upload-artifact@v3
+              with:
+                name: dragon-file
+                path: dragon.txt
+
+    

@@ -2,13 +2,14 @@ name: my first workflow | shell script
 
 on: push
 
+
 jobs:
     first_job:
         runs-on: ubuntu-latest
         steps:
             - name: checkout repo
               uses: actions/checkout@v4
-              
+
             - name: list files
               run:  ls -ltra
 
