@@ -20,5 +20,16 @@ jobs:
               with:
                 name: dragon-file
                 path: dragon.txt
-
+    test_job2:
+        runs-on: ubuntu-latest
+       
+        steps:
+            
+            - name: download artifact 
+              uses: actions/download-artifact@v3
+              with:
+               name: dragon-file
+              
+            - name: Test File Exists
+              run: grep -i "dragon" dragon.txt
     
