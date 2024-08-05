@@ -6,4 +6,4 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: docker login
-              run: docker login --username=20150748 --password=#tTesla2030#
+              run: docker login --username=20150748 --password=#Tesla2030#
