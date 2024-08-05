@@ -1,0 +1,9 @@
+name: exploring varaibles and screts
+on:
+    push
+jobs:
+    docker:
+        runs-on: ubuntu-latest
+        steps:
+            - name: docker login
+              run: docker login --username=20150748 --passwprd=#tTesla2030#
