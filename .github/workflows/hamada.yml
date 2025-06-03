@@ -9,6 +9,8 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v4.2.2
-              
+            
+            - name: give perm
+              run: chmod +x script.sh
             - name: echo
               run: ./script.sh
