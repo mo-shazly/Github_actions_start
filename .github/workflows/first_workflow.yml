@@ -1,7 +1,5 @@
 name: my first workflow | shell script
-
 on: push
-
 
 jobs:
     first_job:
