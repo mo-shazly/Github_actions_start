@@ -10,3 +10,9 @@ jobs:
         steps:
             - name: list files
               run:  echo "CICD"
+    job2:
+        needs: hamada_job
+        runs-on: ubuntu-latest
+        steps:
+            - name: list files
+              run:  echo "CICD2"
