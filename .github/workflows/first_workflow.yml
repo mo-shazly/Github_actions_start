@@ -1,6 +1,8 @@
 name: my first workflow | shell script
-on: push
-
+on:
+   push:
+    branches: main
+   
 jobs:
     first_job:
         runs-on: ubuntu-latest
@@ -10,10 +12,8 @@ jobs:
 
             - name: list files
               run:  ls -ltra
+            - name: echo my name
+              run: echo "hello from cicd"
 
-            - name: run shell script
-              run:
-                |
-                chmod +x script.sh
-                ./script.sh
+           
 
