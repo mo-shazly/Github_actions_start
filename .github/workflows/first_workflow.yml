@@ -15,5 +15,16 @@ jobs:
             - name: echo my name
               run: echo "hello from cicd"
 
-           
+            - name: install cowsay
+              run: sudo apt-get install cowsay -y
+
+            - name: run shell script
+              run: cowsay -f dragon "Run for cover, iam a Dragon....RAWR" >> dragon.txt
+
+            - name: test file exist
+              run: grep -i "dragon" dragon.txt
+              
+            - name: read file
+              run: cat dragon.txt
+                
 
