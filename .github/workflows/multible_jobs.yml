@@ -19,7 +19,7 @@ jobs:
               uses: actions/upload-artifact@v6.0.0
               with:
                 name: dragon-file
-                
+
                 path: dragon.txt
 
     test_job2:
@@ -28,7 +28,7 @@ jobs:
         steps:
             
             - name: download artifact 
-              uses: actions/download-artifact@v3
+              uses: actions/download-artifact@v7.0.0
               with:
                name: dragon-file
               
@@ -42,7 +42,7 @@ jobs:
         steps:
 
             - name: download artifact 
-              uses: actions/download-artifact@v3
+              uses: actions/download-artifact@v7.0.0
               with:
                name: dragon-file
 
