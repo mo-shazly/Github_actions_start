@@ -1,4 +1,4 @@
-name: my first workflow | shell script
+name: my sec workflow | shell script
 
 on: 
    push:
@@ -12,7 +12,7 @@ jobs:
               run:  ls -ltra
 
             - name: run shell script
-              run: echo "hello from first wf"
+              run: ./script10.sh
 
 
        
