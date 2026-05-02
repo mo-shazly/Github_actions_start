@@ -1,0 +1,14 @@
+name: x workflow
+on: 
+    push:
+        branches:
+            - main
+
+jobs:
+   docker:
+    runs-on: ubuntu-latest
+    steps:
+        - name: echo name
+          run: echo "shazly"
+
+
