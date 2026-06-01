@@ -1,0 +1,21 @@
+name: net workflow | shell script
+
+on:
+   push:
+    branches: main
+jobs:
+    first_job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout repo
+              uses: actions/checkout@v4
+
+            - name: list files
+              run:  ls -ltra
+
+            - name: run shell script
+              run: echo "first wf" 
+
+
+       
+
