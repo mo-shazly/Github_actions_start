@@ -6,9 +6,9 @@ on:
 
 jobs:
  ascii_job:
-  permissions:
-   contents: Read
-   packages: write
+  # permissions:
+  #  contents: Read
+  #  packages: write
   runs-on: ubuntu-latest
   steps:
   - name: install Cowsay program
