@@ -23,6 +23,7 @@ jobs:
 
 
  sec_job:
+  needs: ascii_job
   runs-on: ubuntu-latest
   steps:
 
