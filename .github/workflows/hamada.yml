@@ -1,6 +1,23 @@
 name: Cowsay UI/MOBILE 
 
-on: push
+on: 
+  workflow_dispatch:
+   inputs:
+    action:
+     description: "action to perform"
+     required: true
+     options:
+     - scale
+
+     env:
+     type: choice
+     options:
+     - dev
+     - staging
+     - prod
+
+
+
 
 
 jobs:

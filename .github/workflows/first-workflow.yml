@@ -1,0 +1,16 @@
+name: route- fw - echo name
+
+on:
+ push:
+
+jobs:
+ first_job:
+  runs-on: ubuntu-latest
+  steps:
+  - name: list files
+    run: ls
+
+  - name: print name
+    run: echo "my first workflow"
+
+ 
