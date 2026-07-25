@@ -19,7 +19,16 @@ jobs:
      ./script.sh
 
   - name: list files
-    run: ls
+    run: 
+
+
+ sec_job:
+  runs-on: ubuntu-latest
+  steps:
+
+  - name: print
+    run: echo "sec job"  
+  
 
 
   
