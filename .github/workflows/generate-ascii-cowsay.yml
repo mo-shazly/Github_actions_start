@@ -1,6 +1,9 @@
 name: C3 COWSAY
 
 on:
+ push:
+  branches: main
+
  workflow_dispatch:
 
 jobs:
