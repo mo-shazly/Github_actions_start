@@ -21,6 +21,7 @@ jobs:
 
  ascii_job_sec:
   runs-on: ubuntu-latest
+  needs: ascii_job_c3
   steps:
 
   - name: Checkout
