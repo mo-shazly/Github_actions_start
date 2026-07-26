@@ -1,0 +1,16 @@
+name: first wf c3
+
+on: push
+
+jobs:
+ print_name_job:
+  runs-on: ubuntu-latest
+  steps:
+  - name: print name
+    run: echo "hello from route c3"
+
+  - name: print print_name_job
+    run: echo "sec step"
+  
+
+
