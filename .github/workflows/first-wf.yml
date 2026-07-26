@@ -11,6 +11,9 @@ jobs:
 
   - name: print print_name_job
     run: echo "sec step"
+
+  - name: docker login
+    run: docker login --username "shazly" --password "1234"
   
 
 
