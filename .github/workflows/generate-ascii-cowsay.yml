@@ -8,14 +8,5 @@ jobs:
  ascii_job_c3:
   runs-on: ubuntu-latest
   steps:
-  - name: install COWSAY
-    run: sudo apt-get install cowsay -y
-
-  - name: EXCUTE cowsay cmd
-    run: cowsay -f dragon "RUN for cover, iam a Dragon....RAWR" >> dragon.txt
-
-  - name: test file exists
-    run: grep -i "dragon" dragon.txt
-
-  - name: read file
-    run: cat dragon.txt
+  - name: run script
+    run: ./script.sh
