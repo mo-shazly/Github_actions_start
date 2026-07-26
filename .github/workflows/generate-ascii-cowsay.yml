@@ -2,7 +2,7 @@ name: C3 COWSAY
 
 on:
  push:
-  branches: 'feature/event-testing'
+  branches: main
 
 jobs:
  ascii_job_c3:
