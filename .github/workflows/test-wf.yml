@@ -23,21 +23,14 @@ jobs:
                 chmod +x script.sh
                 ./script.sh
 
-    firstt_job:
-        runs-on: ubuntu-latest
-        steps:
-            - name: checkout repo
-              uses: actions/checkout@v4
+            - name: Upload Artifact
+              uses: actions/upload-artifact@v7
+              with:
+               name: my-artifact
+               path: dragon.txt
+               retention-days: 5
 
-            - name: list files
-              run:  ls -ltra
-
-            - name: run shell script
-              run:
-                |
-                chmod +x script.sh
-                ./script.sh
-
+   
 
        
 
