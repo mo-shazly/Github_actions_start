@@ -10,6 +10,9 @@ jobs:
    matrix:
     os: [ubuntu-latest, windows-latest, ubuntu-20]
     images: [hello-world, alpine]
+    exclude:
+    - images: alpine
+      os: windows-latest
 
   runs-on: ${{ matrix.os }}
   steps:
@@ -19,3 +22,4 @@ jobs:
    - name: run image
      run: docker run ${{ matrix.images }}
   
+
