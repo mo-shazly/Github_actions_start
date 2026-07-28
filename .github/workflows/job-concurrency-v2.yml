@@ -1,0 +1,27 @@
+name: jb concurrency v2
+
+on:
+ push:
+
+concurrency:
+ group: prod-deployment
+ cancel-in-progress: true
+
+ jobs:
+
+  build:
+   runs-on: ubuntu-latest
+   steps: 
+    - run: echo "build"
+
+  test:
+   runs-on: ubuntu-latest
+   steps: 
+    - run: echo "test"
+
+  deploy:
+   runs-on: ubuntu-latest
+   steps: 
+    - run: echo "Deploy"
+
+ 
