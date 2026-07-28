@@ -3,6 +3,7 @@ name: jb concurrency v2
 on:
  push:
 
+
 concurrency:
  group: prod-deployment
  cancel-in-progress: true
