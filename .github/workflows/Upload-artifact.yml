@@ -1,4 +1,4 @@
-name: my first workflow | shell script
+name: Upload Artifact
 
 on:
    workflow_dispatch:
