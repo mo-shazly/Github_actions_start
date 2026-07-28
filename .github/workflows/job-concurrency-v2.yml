@@ -9,7 +9,7 @@ concurrency:
  cancel-in-progress: true
 
 
- jobs:
+jobs:
 
   build:
    runs-on: ubuntu-latest
